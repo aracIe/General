@@ -1,0 +1,6 @@
+name: General
+version: ${project.version}
+main: ru.aracle.general.Core
+api-version: 1.16
+authors: [ aracle ]
+description: General plugin for dungeons server
