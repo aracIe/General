@@ -1,13 +1,16 @@
 package ru.aracle.general;
 
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 import ru.aracle.general.mysql.Tables;
 import ru.aracle.general.mysql.HP;
+import ru.aracle.general.settings.Items;
 import ru.aracle.general.settings.Settings;
 
 import java.io.File;
+import java.util.Objects;
 
 public final class Core extends JavaPlugin {
 
@@ -25,6 +28,8 @@ public final class Core extends JavaPlugin {
     public void onEnable() {
         plugin = this;
         Settings.load();
+        Items.load();
+        Bukkit.getConsoleSender().sendMessage(configuration.getString("MySQL.address"));
         connection();
         Tables.load();
     }

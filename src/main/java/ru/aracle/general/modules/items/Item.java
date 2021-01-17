@@ -18,9 +18,9 @@ public class Item {
     @Getter @Setter
     private String description;
     @Getter @Setter
-    private int attack_damage;
+    private String attack_speed;
     @Getter @Setter
-    private int attack_speed;
+    private int attack_damage;
     @Getter @Setter
     private int defence;
     @Getter @Setter
@@ -36,8 +36,8 @@ public class Item {
         String type = "ItemType";
         String name = "ItemName";
         String description = "Explorer";
+        String attack_speed = "normal";
         int attack_damage = 0;
-        int attack_speed = 0;
         int defence = 0;
         int health = 0;
         int arcana = 0;
@@ -47,14 +47,14 @@ public class Item {
         public Constructor type(String type) { this.type = type; return this; }
         public Constructor name(String name) { this.name = name; return this; }
         public Constructor description(String description) { this.description = description; return this; }
+        public Constructor attack_speed(String attack_speed) { this.attack_speed = attack_speed; return this; }
         public Constructor attack_damage(int attack_damage) { this.attack_damage = attack_damage; return this; }
-        public Constructor attack_speed(int attack_speed) { this.attack_speed = attack_speed; return this; }
         public Constructor defence(int defence) { this.defence = defence; return this; }
         public Constructor health(int health) { this.health = health; return this; }
         public Constructor arcana(int arcana) { this.arcana = arcana; return this; }
         public Constructor endurance(int endurance) { this.endurance = endurance; return this; }
 
-        public Item construct() { return new Item(iid, type, name, description, attack_damage, attack_speed, defence, health, arcana, endurance); }
+        public Item construct() { return new Item(iid, type, name, description, attack_speed, attack_damage, defence, health, arcana, endurance); }
     }
 
 }

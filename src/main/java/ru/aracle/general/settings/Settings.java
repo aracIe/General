@@ -11,11 +11,11 @@ public class Settings {
         File settings = Core.instance().settings;
         FileConfiguration configuration = Core.instance().configuration;
         if (!settings.exists()) {
-            configuration.set("mySQL.address","localhost");
-            configuration.set("mySQL.database","database");
-            configuration.set("mySQL.username","user");
-            configuration.set("mySQL.password","password");
-            configuration.set("mySQL.port", 3306);
+            configuration.set("MySQL.address","localhost");
+            configuration.set("MySQL.database","database");
+            configuration.set("MySQL.username","user");
+            configuration.set("MySQL.password","password");
+            configuration.set("MySQL.port", 3306);
             configuration.set("game-options.location","lobby");
             try { configuration.save(settings); }
             catch (IOException e) { e.printStackTrace(); }
