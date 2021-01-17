@@ -17,6 +17,9 @@ public final class Core extends JavaPlugin {
     public static HP pool() {return pool;}
     public File settings = new File(getDataFolder()+File.separator+"settings.yml");
     public FileConfiguration configuration = YamlConfiguration.loadConfiguration(settings);
+    public File items = new File(getDataFolder()+File.separator+"items.yml");
+    public FileConfiguration itemsConfiguration = YamlConfiguration.loadConfiguration(items);
+
 
     @Override
     public void onEnable() {
