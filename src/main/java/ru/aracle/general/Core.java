@@ -10,7 +10,6 @@ import ru.aracle.general.settings.Items;
 import ru.aracle.general.settings.Settings;
 
 import java.io.File;
-import java.util.Objects;
 
 public final class Core extends JavaPlugin {
 

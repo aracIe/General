@@ -78,7 +78,7 @@ public class Tables {
         PreparedStatement statement;
         try {
             connection = Core.pool().getConnection();
-            statement = connection.prepareStatement("CREATE TABLE IF NOT EXISTS inventory (uuid VARCHAR(36), id INT(7) NOT NULL AUTO_INCREMENT, iid VARCHAR(20), rarity VARCHAR(20), power INT(5), first INT(5), second INT(5), third INT(5), PRIMARY KEY (id))");
+            statement = connection.prepareStatement("CREATE TABLE IF NOT EXISTS inventory (uuid VARCHAR(36), id INT(7) NOT NULL AUTO_INCREMENT, iid VARCHAR(20), rarity VARCHAR(20), fraction VARCHAR(20), power INT(5), level INT(5), first INT(5), second INT(5), third INT(5), attack_damage INT(3), defence INT(3), health INT(4), arcana INT(4), endurance INT(4), PRIMARY KEY (id))");
             statement.executeUpdate();
             statement.close();
             connection.close();
@@ -92,7 +92,7 @@ public class Tables {
         PreparedStatement statement;
         try {
             connection = Core.pool().getConnection();
-            statement = connection.prepareStatement("CREATE TABLE IF NOT EXISTS items (iid VARCHAR(20) , type VARCHAR(20), name VARCHAR(20), description TEXT(600), attack_speed VARCHAR(20), attack_damage INT(3), defence INT(3), health INT(4), arcana INT(4), endurance INT(4))");
+            statement = connection.prepareStatement("CREATE TABLE IF NOT EXISTS items (iid VARCHAR(20) , type VARCHAR(20), name VARCHAR(20), description TEXT(600), attack_speed VARCHAR(20), element VARCHAR(20), fraction VARCHAR(20), attack_damage INT(3), defence INT(3), health INT(4), arcana INT(4), endurance INT(4))");
             statement.executeUpdate();
             statement.close();
             connection.close();
